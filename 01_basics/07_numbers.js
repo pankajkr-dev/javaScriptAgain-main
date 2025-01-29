@@ -68,3 +68,134 @@ let q="pankaj";
 console.log(isNaN(q));
 //output: true 
 //typeof NaN is number
+
+//infinity
+var myNum=2;
+var txt="";
+while(myNum!=Infinity){
+    myNum=myNum*myNum;
+    txt=+myNum+"<br>";
+}
+console.log(txt);
+//output: 4,16,256,65536,4294967296,18446744073709552000,Infinity
+
+console.log(typeof Infinity);
+//output: number
+
+var myNumber=2/0;
+console.log(myNumber);
+//output: Infinity
+
+//Number Methods
+
+//toString() method
+let r=123;
+console.log(r.toString());
+//output: 123
+console.log(typeof r);
+//output: number
+console.log(typeof r.toString());
+//output: string
+
+//toExponential() method
+let s=9.656;
+console.log(s.toExponential());
+//output: 9.656e+0
+console.log(s.toExponential(2));
+//output: 9.66e+0
+console.log(s.toExponential(4));
+//output: 9.6560e+0
+
+//toFixed() method
+let t=9.656;
+console.log(t.toFixed());
+//output: 10
+console.log(t.toFixed(0));
+//output: 10
+console.log(t.toFixed(2));
+//output: 9.66
+console.log(t.toFixed(4));
+//output: 9.6560
+
+
+//toPrecision() method
+let u=19.656;
+console.log(u.toPrecision());
+//output: 19.656
+console.log(u.toPrecision(2));
+//output: 19  
+console.log(u.toPrecision(4));
+//output: 19.66
+console.log(u.toPrecision(6));
+//output: 19.6560
+
+//valueOf() method
+let v=123;
+console.log(v.valueOf());
+//output: 123
+console.log(typeof v.valueOf());
+//output: number
+let xx="pankaj";
+console.log(xx.valueOf());
+//output: pankaj
+console.log(typeof xx.valueOf());
+//output: string
+
+
+//number() function
+let yy="123";
+console.log(Number(yy));
+//output: 123
+console.log(Number(true));
+//output: 1
+console.log(Number(false));
+//output: 0
+console.log(Number("10 20"));
+//output: NaN
+console.log(Number("10,20"));
+//output: NaN
+console.log(Number("10.20"));
+//output: 10.20
+//it also works of dates
+console.log(Number(new Date("2017-09-30")));
+//output: 1506729600000
+console.log(Number(new Date("2017-09-30")));
+//output: 1506729600000
+
+//parseInt() function
+let zz="10";
+console.log(parseInt(zz));
+//output: 10
+let aaa="10.33";
+console.log(parseInt(aaa));
+//output: 10
+let bbb="10 20 30";
+console.log(parseInt(bbb));
+
+
+//issaferInteger() method
+let ccc=123;
+console.log(Number.isSafeInteger(ccc));
+//output: true
+let ddd=12345678901234567890;
+console.log(Number.isSafeInteger(ddd));
+
+
+//number properties
+console.log(Number.MAX_VALUE);
+//output: 1.7976931348623157e+308
+console.log(Number.MIN_VALUE);
+//output: 5e-324
+console.log(Number.POSITIVE_INFINITY);
+//output: Infinity
+console.log(Number.NEGATIVE_INFINITY);
+//output: -Infinity
+console.log(Number.NaN);
+//output: NaN
+console.log(Number.EPSILON);
+//output: 2.220446049250313e-16
+console.log(Number.MAX_SAFE_INTEGER);
+//output: 9007199254740991
+console.log(Number.MIN_SAFE_INTEGER);
+//output: -9007199254740991
+
